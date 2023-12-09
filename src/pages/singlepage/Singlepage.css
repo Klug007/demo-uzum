@@ -1,0 +1,197 @@
+.product-details {
+    width: 85%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    padding: 20px 0;
+}
+
+.image-detail {
+    background-color: #efefef;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-detail img {
+    object-fit: contain;
+    height: 600px;
+    width: 80%;
+}
+
+.text-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 600px;
+}
+
+.text-detail h1 {
+    padding: 0 20px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.product-details h2 {
+    color: darkblue;
+    padding: 0 20px;
+}
+
+.product-details p {
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0 20px;
+}
+
+.rating {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    color: grey;
+}
+
+.rating p {
+    font-size: 15px;
+}
+
+.heart2 {
+    height: 15px;
+}
+
+.rating2 {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.seller {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+}
+
+.seller p {
+    font-size: 16px;
+}
+
+.seller2 {
+    display: flex;
+    gap: 50px;
+}
+
+.seller2:nth-child(2) p:nth-child(2) {
+    color: grey;
+}
+
+.seller2:nth-child(1) p:nth-child(2) {
+    text-decoration: underline;
+    font-weight: 400;
+}
+
+.amount div {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 120px;
+    padding: 8px 0;
+    margin-top: 5px;
+    margin-left: 20px;
+    border: 1px solid grey;
+}
+
+.amount div p {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.price1 div {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.credit {
+    background-color: #efefef;
+    padding: 15px 0px;
+    margin-left: 15px;
+    border-radius: 10px;
+}
+
+.credit:hover {
+    background-color: #ddd9d9;
+}
+
+.credit p {
+    font-size: 16px;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.button button:nth-child(1) {
+    border: none;
+    height: 50px;
+    width: 100%;
+    font-size: 20px;
+    color: white;
+    border-radius: 8px;
+    background-color: #7000ff;
+}
+
+.button button:nth-child(1):hover {
+    background-color: #6502e7;
+}
+
+.button button:nth-child(2) {
+    border: 1px solid #7000ff;
+    background-color: none;
+    color: #7000ff;
+    font-size: 20px;
+    height: 50px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.button button:nth-child(2):hover {
+    background-color: #e5e5ff;
+}
+
+.description li {
+    color: grey;
+    margin-left: 20px;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

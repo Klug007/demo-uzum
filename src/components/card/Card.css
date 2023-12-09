@@ -1,0 +1,86 @@
+.cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.card {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+}
+
+.image-card img:nth-child(1) {
+    width: 100%;
+    height: 50%;
+    transition: all 2s;
+    object-fit: contain;
+}
+
+.image-card img:nth-child(1):hover {
+    transform: scale(1.1);
+}
+
+.image-card {
+    overflow: hidden;
+    background-color: #efefef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    position: relative;
+}
+
+.heart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 20px;
+}
+
+.card-text {
+    padding: 0 5px;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+}
+
+.card-text p:nth-child(1) {
+    color: black;
+}
+
+.card-text p:nth-child(2) {
+    color: gray;
+    font-size: 12px;
+}
+.star {
+    height: 13px;
+}
+.hire {
+    background-color: yellow;
+    color: black;
+    width: 90px;
+    font-size: 12px;
+}
+
+.price p:nth-child(1) {
+    font-size: 12px;
+    color: grey;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+    padding: 5px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price p:nth-child(2) {
+    font-size: 14px;
+}
+
+.bag2 {
+    height: 25px;
+}
