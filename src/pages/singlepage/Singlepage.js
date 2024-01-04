@@ -19,6 +19,7 @@ function Singlepage() {
             setProduct(singleItem);
         });
     }, [paramId]);
+    
     return (
         <div className="product-details">
             <div className="image-detail">

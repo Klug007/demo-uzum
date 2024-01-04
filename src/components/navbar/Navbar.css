@@ -51,7 +51,7 @@
 
 #text {
     width: 400px;
-    padding: 10px 20px;
+    padding: 9px 20px;
     font-size: 16px;
     border: none;
 }
@@ -86,11 +86,18 @@
     outline: none;
 }
 
+#text[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: searchfield-cancel-button;
+    background-color: #f0f0ff;
+}
+
 .li {
     display: flex;
     align-items: center;
     gap: 8px;
     cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .li img {
@@ -101,3 +108,6 @@
     font-weight: 600;
 }
 
+.li:hover {
+    background-color: #f1f1f1;
+}

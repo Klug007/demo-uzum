@@ -28,7 +28,7 @@ function Navbar() {
                 <li>
                     <div className="search">
                         <input
-                            type="text"
+                            type="search"
                             name=""
                             id="text"
                             placeholder="Искать товары и категории"
