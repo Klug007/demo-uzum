@@ -2,10 +2,10 @@ import React from "react";
 import "./Navbar.css";
 import img2 from "../../assets/search-document.png";
 import image from "../../assets/img.webp";
-import img3 from '../../assets/search.png'
-import account from '../../assets/account.png'
-import heart from '../../assets/heart.png'
-import bag from '../../assets/shopping-bag.png'
+import img3 from "../../assets/search.png";
+import account from "../../assets/account.png";
+import heart from "../../assets/heart.png";
+import bag from "../../assets/shopping-bag.png";
 import { Link } from "react-router-dom";
 
 function Navbar() {
@@ -15,14 +15,18 @@ function Navbar() {
                 <li>
                     <Link to={"/"}>
                         <a href="/">
-                            <img src={image} alt="" className="image" />
+                            <img
+                                src={image}
+                                alt=""
+                                className="image"
+                            />
                             uzum market
                         </a>
                     </Link>
                 </li>
                 <li>
                     <Link to={"/about"}>
-                        <a>
+                        <a href="/about">
                             {" "}
                             <img src={img2} alt="" className="image2" />
                             Каталог

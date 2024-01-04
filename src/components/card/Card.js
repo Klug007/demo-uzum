@@ -4,6 +4,8 @@ import star from "../../assets/star.png";
 import "./Card.css";
 import bag2 from '../../assets/shopping-bag (1).png'
 import { Link } from "react-router-dom";
+// import Skeleton from 'react-loading-skeleton'
+
 function Card({ image, title, product }) {
     return (
         <div className="card">
