@@ -1,31 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Singlepage.css";
 import star from "../../assets/star.png";
 import heart from "../../assets/heart.png";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import axios from "axios";
 
 function Singlepage() {
-    const product = useLocation().state;
+    const [product, setProduct] = useState([]);
+    let paramId = useParams().id;
+
+    useEffect(() => {
+        axios.get("https://dummyjson.com/products").then((res) => {
+            const singleItem = res.data.products.find((pr) => pr.id == paramId);
+            setProduct(singleItem);
+        });
+    }, [paramId]);
     return (
         <div className="product-details">
-            {/* <div className="image-detail">
-                <img src={product.images[0]} alt="" />
-            </div> */}
             <div className="image-detail">
                 <Swiper
                     navigation={true}
                     modules={[Navigation]}
                     className="mySwiper"
                 >
-                    {
-                        product.images.map(image => (
-                            <SwiperSlide><img src={image} alt="" /></SwiperSlide>
-                        ))
-                    }
+                    {product.images &&
+                        product.images.map((image) => (
+                            <SwiperSlide key={image}>
+                                <img src={image} alt="" />
+                            </SwiperSlide>
+                        ))}
                 </Swiper>
             </div>
             <div className="text-detail">

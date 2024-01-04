@@ -11,7 +11,6 @@ function Card({ image, title, product }) {
         <div className="card">
             <Link
                 to={`/product/${product.id}`}
-                state={product}
                 style={{ textDecoration: "none" }}
             >
                 <div className="image-card">

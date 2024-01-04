@@ -5,6 +5,7 @@ import Card from "./components/card/Card";
 import { ProductContext } from "./context/ProductContext";
 import Loader from "./components/Loader/Loader";
 import NewLoader from "./components/NewLoader/NewLoader";
+
 function App() {
     const { setIsLoading } = useContext(ProductContext);
     const [data, setData] = useState([]);

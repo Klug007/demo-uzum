@@ -14,23 +14,15 @@ function Navbar() {
             <ul className="navbar_collection">
                 <li>
                     <Link to={"/"}>
-                        <a href="/">
-                            <img
-                                src={image}
-                                alt=""
-                                className="image"
-                            />
-                            uzum market
-                        </a>
+                        <img src={image} alt="" className="image" />
+                        uzum market
                     </Link>
                 </li>
                 <li>
                     <Link to={"/about"}>
-                        <a href="/about">
-                            {" "}
-                            <img src={img2} alt="" className="image2" />
-                            Каталог
-                        </a>
+                        {" "}
+                        <img src={img2} alt="" className="image2" />
+                        Каталог
                     </Link>
                 </li>
                 <li>

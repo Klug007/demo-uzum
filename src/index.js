@@ -8,7 +8,6 @@ import Contact from "./pages/contact/Contact";
 import Navbar from "./components/navbar/Navbar";
 import Singlepage from "./pages/singlepage/Singlepage";
 import Footer from "./components/footer/footer";
-// import Loader from "./components/Loader/Loader";
 import { ProductCotextProvider } from "./context/ProductContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -23,6 +22,7 @@ root.render(
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/product/:id" element={<Singlepage />} />
+                    <Route path="*" element={<h1>Not Found</h1>} />
                 </Routes>
                 <Footer />
             </BrowserRouter>
