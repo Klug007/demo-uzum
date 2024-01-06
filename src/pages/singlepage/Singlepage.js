@@ -31,7 +31,7 @@ function Singlepage() {
         // Скрываем уведомление через 2 секунды
         setTimeout(() => {
             setShowNotification(false);
-        }, 200000);
+        }, 2000);
     };
 
     return (
