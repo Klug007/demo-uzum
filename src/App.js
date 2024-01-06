@@ -5,6 +5,7 @@ import Card from "./components/card/Card";
 import { ProductContext } from "./context/ProductContext";
 import Loader from "./components/Loader/Loader";
 import NewLoader from "./components/NewLoader/NewLoader";
+import { Counter } from "./components/Counter";
 
 function App() {
     const { setIsLoading } = useContext(ProductContext);
@@ -37,6 +38,7 @@ function App() {
                         image={product.images[0]}
                         title={product.title}
                         product={product}
+                        key={product.id}
                     />
                 ))}
             </div>

@@ -86,11 +86,6 @@
     outline: none;
 }
 
-#text[type="search"]::-webkit-search-cancel-button {
-    -webkit-appearance: searchfield-cancel-button;
-    background-color: #f0f0ff;
-}
-
 .li {
     display: flex;
     align-items: center;

@@ -1,12 +1,25 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import heart from "../../assets/heart.png";
 import star from "../../assets/star.png";
 import "./Card.css";
-import bag2 from '../../assets/shopping-bag (1).png'
+import { ReactComponent as Bag } from "../../assets/shopping-bag.svg";
 import { Link } from "react-router-dom";
-// import Skeleton from 'react-loading-skeleton'
+import { BasketContext } from "../../context/BasketContext";
+// import { toast, ToastContainer } from "react-toastify";
 
 function Card({ image, title, product }) {
+    const { addToBasket } = useContext(BasketContext);
+    const [showNotification, setShowNotification] = useState(false);
+
+    const handleAddToBasket = (product) => {
+        addToBasket(product);
+        setShowNotification(true);
+
+        // Скрываем уведомление через 2 секунды
+        setTimeout(() => {
+            setShowNotification(false);
+        }, 2000);
+    };
     return (
         <div className="card">
             <Link
@@ -34,12 +47,26 @@ function Card({ image, title, product }) {
                             </p>
                             <p>{product.price * 12} сум</p>
                         </div>
-                        <div>
-                            <img src={bag2} alt="" className="bag2"/>
-                        </div>
                     </div>
                 </div>
             </Link>
+            <div className="item-bag">
+                <button onClick={() => handleAddToBasket(product)}>
+                    <Bag className="bag2" />
+                </button>
+                {showNotification && (
+                    <div className="notification">
+                        <img src={product.images[0]} alt="" />
+                        <div className="notification-item">
+                            <h1>Ваш товар добавлен в корзину:</h1>
+                            <h1>{product.title}</h1>
+                        </div>
+                        <Link to={"./basket"} className="tranfer">
+                            Перейти в корзину
+                        </Link>
+                    </div>
+                )}
+            </div>
         </div>
     );
 }

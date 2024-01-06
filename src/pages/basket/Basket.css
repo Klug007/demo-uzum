@@ -1,0 +1,14 @@
+.basket {
+    width: 85%;
+    margin: 50px auto;
+    padding: 20px 0;
+}
+
+.basket h1 {
+    font-size: 24px;
+    color: #1f2026;
+}
+
+.amountIn {
+    color: #8b8e99;
+}

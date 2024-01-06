@@ -7,8 +7,13 @@
 
 .card {
     width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 6px 0 rgba(0, 0, 0, 0.19);
 }
 
 .image-card img:nth-child(1) {
@@ -83,5 +88,69 @@
 }
 
 .bag2 {
-    height: 25px;
+    height: 31px;
+    width: 31px;
+    border-radius: 50%;
+    padding: 3.5px;
+    transition: all 0.2s;
+    border: 1px solid #d0d0d0;
+}
+
+.bag2:hover {
+    background-color: #efefef;
+}
+
+.item-bag {
+    object-position: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    bottom: 0;
+    right: 0;
+}
+
+.item-bag button {
+    border: transparent;
+    background-color: transparent;
+}
+
+.notification {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 6px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 700px;
+}
+
+.notification img {
+    width: 100px;
+    height: 100%;
+}
+
+.notification-item {
+    width: 70%;
+    padding: 0 20px;
+}
+
+.notification-item h1 {
+    font-size: 22px;
+}
+
+.tranfer {
+    width: 150px;
+    height: 50px;
+    color: blueviolet;
+    white-space: nowrap;
+    align-self: flex-end;
 }

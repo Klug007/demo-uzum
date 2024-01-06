@@ -46,10 +46,12 @@ function Navbar() {
                     <img src={heart} alt="" />
                     <h1>Избранное</h1>
                 </li>
-                <li className="li">
-                    <img src={bag} alt="" />
-                    <h1>Корзина</h1>
-                </li>
+                <Link to={"./basket"}>
+                    <li className="li">
+                        <img src={bag} alt="" />
+                        <h1>Корзина</h1>
+                    </li>
+                </Link>
             </ul>
         </div>
     );
